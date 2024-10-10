@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:penalty_card_game/screens/home/mvp_screen.dart';
+
 
 class DraftScreen extends StatelessWidget {
   const DraftScreen({super.key});
@@ -111,28 +113,36 @@ class DraftScreen extends StatelessWidget {
           // Botón de "Listo" con el ícono de verificación
           Align(
             alignment: AlignmentDirectional(0.66, -0.04),
-            child: Container(
-              width: 90.0, // Ajusta el tamaño si es necesario
-              height: 90.0,
-              decoration: BoxDecoration(
-                color: Color(0xFF39D2C0), // Color de fondo del botón
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    blurRadius: 6,
-                    offset: Offset(0, 2),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PenaltyGame()), // Navega a la pantalla de MVP (tanda de penales)
+                );
+              },
+              child: Container(
+                width: 90.0,
+                height: 90.0,
+                decoration: BoxDecoration(
+                  color: Color(0xFF39D2C0),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 6,
+                      offset: Offset(0, 2),
+                    ),
+                  ],
+                  border: Border.all(
+                    color: Color.fromARGB(190, 11, 87, 200),
+                    width: 3.0,
                   ),
-                ],
-                border: Border.all(
-                  color:  Color.fromARGB(190, 11, 87, 200), // Color del borde
-                  width: 3.0,
                 ),
-              ),
-              child: Icon(
-                Icons.check,
-                color: Colors.white,
-                size: 60.0, // Tamaño del ícono de verificación
+                child: Icon(
+                  Icons.check,
+                  color: Colors.white,
+                  size: 60.0,
+                ),
               ),
             ),
           ),

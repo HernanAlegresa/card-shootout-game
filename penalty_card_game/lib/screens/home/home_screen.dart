@@ -168,7 +168,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PenaltyGame()),
+                  MaterialPageRoute(builder: (context) => const DraftScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -200,7 +200,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PenaltyGame()),
+                  MaterialPageRoute(builder: (context) => const DraftScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -232,7 +232,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DraftScreen()),
+                  MaterialPageRoute(builder: (context) => const DraftScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
