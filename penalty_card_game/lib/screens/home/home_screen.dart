@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:penalty_card_game/blocs/sign_in_bloc/sign_in_bloc.dart';
 import 'package:penalty_card_game/screens/home/mvp_screen.dart';
+import 'package:penalty_card_game/screens/home/draft_screen.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -230,7 +232,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => PenaltyGame()),
+                  MaterialPageRoute(builder: (context) => DraftScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
