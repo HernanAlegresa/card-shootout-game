@@ -18,6 +18,7 @@ class FirestoreService {
       print('Error adding player $playerId: $e');
     }
   }
+  
 
   Future<void> addMultiplePlayers() async {
     // Jugadores para la colección de Delanteros (Forwards)
